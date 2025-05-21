@@ -1,0 +1,14 @@
+name: customer
+description: A customer is a user who has placed orders.
+key_table: db_prod.core.customer_dim
+features:
+  - type: metric
+    name: total_orders_count
+    asset: db_prod.core.orders
+    measure: count
+    field: O_ORDERKEY
+    description: Total number of orders for each customer
+    joins:
+      - type: one_to_many
+        relationship: orders
+        sql: "{source}.C_CUSTKEY = {destination}.O_CUSTKEY"

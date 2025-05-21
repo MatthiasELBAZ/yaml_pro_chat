@@ -1,0 +1,44 @@
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Dependency directories
+node_modules/
+jspm_packages/
+bower_components/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Directory for instrumented libs
+lib-cov
+
+# Coverage directory
+coverage/
+
+# Build outputs
+dist/
+build/
+out/
+
+# Cache directories
+.npm
+.eslintcache
+.cache
+
+# OS specific files
+.DS_Store
+Thumbs.db 

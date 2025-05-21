@@ -1,0 +1,17 @@
+features:
+  - type: metric
+    name: total_revenue
+    asset: db_prod.sales.transactions
+    measure: revenue
+    data_type: number
+    time_field: transaction_date
+    filters:
+      - type: field
+        field: transaction_status
+        operator: is
+        values: completed
+      - type: field
+        field: region
+        operator: in
+        values: [ 'North America', 'Europe' ]
+    join_name: sales_to_customers

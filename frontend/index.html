@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lynk.ai Feature Creator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="login-overlay" class="login-overlay">
+        <div class="login-container">
+            <h2>Welcome to Lynk.ai Feature Creator</h2>
+            <p>Please enter your client ID to continue:</p>
+            <div class="login-form">
+                <input type="text" id="user-id-input" placeholder="Enter client ID" autocomplete="off">
+                <button id="login-button" type="button">Login</button>
+            </div>
+            <p id="login-error" class="error-message"></p>
+        </div>
+    </div>
+
+    <div id="app-container" class="app-container hidden">
+        <header>
+            <h1>Lynk.ai Feature Creator</h1>
+            <p>Describe the feature you want to create, and our AI will help you generate the YAML</p>
+        </header>
+
+        <main>
+            <div class="chat-container">
+                <div id="chat-messages" class="chat-messages">
+                    <div class="message system">
+                        <div class="message-content">
+                            <p>Hello! I'm an expert in Lynk.ai features. I can help you create features in YAML format. What type of feature would you like to create? (Metric, First-Last, Formula, or Field)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="input-area">
+                    <form id="chat-form">
+                        <textarea id="user-input" placeholder="Describe the feature you want to create..." rows="3"></textarea>
+                        <button type="submit" id="send-button">Send</button>
+                    </form>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Powered by LangGraph and LangChain</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 

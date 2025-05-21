@@ -1,0 +1,20 @@
+
+name: customer
+description: a customer is a user who logged in at least once
+key_table: db_prod.core.customer_dim
+aliases:
+  - user
+features:
+  - type: metric
+    name: total_purchase_price
+    asset: db_prod.core.orders
+    measure: total_order_amount
+    filters: null
+related_assets:
+  db_prod.core.orders:
+    relationship: one_to_many
+    joins:
+      - name: all_orders
+        default: true
+        type: sql
+        sql: "{source}.{customer_id} = {destination}.{customer_id}"

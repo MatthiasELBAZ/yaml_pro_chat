@@ -1,0 +1,6 @@
+type: metric
+name: total_customer_orders
+asset: ORDERS
+metric: count
+group_by: O_CUSTKEY
+description: Total number of orders for each customer
